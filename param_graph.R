@@ -9,7 +9,7 @@ Quality$minlen <- as.factor(gsub("_.*", "", gsub(".*minlen", "", Quality$Assembl
 Quality$minsites <- as.factor(gsub("_.*", "", gsub(".*minsites", "", Quality$Assembly.Directory) ) )#minsite
 
 #install and load ggplot2 package for graphing
-if(!require("ggplot2", quietly = TRUE)){
+if (!require("ggplot2", quietly = TRUE)) {
   install.packages("ggplot2")
 }
 
