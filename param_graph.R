@@ -8,7 +8,11 @@ Quality$pval <- as.factor(gsub("_.*", "", gsub(".*pval", "", Quality$Assembly.Di
 Quality$minlen <- as.factor(gsub("_.*", "", gsub(".*minlen", "", Quality$Assembly.Directory) ) )#minlen
 Quality$minsites <- as.factor(gsub("_.*", "", gsub(".*minsites", "", Quality$Assembly.Directory) ) )#minsite
 
-#load ggplot2 package for graphing
+#install and load ggplot2 package for graphing
+if(!require("ggplot2", quietly = TRUE)){
+  install.packages("ggplot2")
+}
+
 library(ggplot2)
 
 #creating the plot
