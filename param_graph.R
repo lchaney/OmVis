@@ -19,10 +19,10 @@ library(ggplot2)
 param_graph <- ggplot(data = Quality, #specify input data
        aes(x = Length.in.Basepairs, y = Contig.Count)) + #specify x and y
   geom_point(aes(color = minlen, #data as points, specify color 
-                 shape = pval, #specify shape
-                 size = minsites), #specify size
+                 shape = minsites, #specify shape
+                 size = pval), #specify size
              alpha = .6) + #add transparency to points so you can see overlaps
-  scale_size_manual(values = c(3, 5, 7)) + #specify size of points
+  scale_size_manual(values = c(3, 4, 5, 6, 7)) + #specify size of points
 #  facet_grid(fp ~ fn, labeller = label_both) + #plot split into subplots w/ labels
   theme_bw() + #change the aesthetics of graph with white background
   scale_x_continuous(labels = function(x) x/1000000) + #convert bp to mb for x
